@@ -4,6 +4,7 @@ import $ from 'jquery';
 import logo from './logo.svg';
 import './App.css';
 import clubs from './components/clubs.json';
+import Title from './components/Title';
 
 class App extends Component {
   constructor() {
@@ -34,11 +35,20 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <button onClick={this.shuffleGame} className="btn btn-info">Shuffle</button>
-        <h2>{this.state.randomCountry1}</h2>
-        <h1>{this.state.player1}</h1>
-        <h2>{this.state.randomCountry2}</h2>
-        <h1>{this.state.player2}</h1>
+      <Title/>
+        <div className="block">
+          <h3>Player 1: </h3>
+          <h2>{this.state.randomCountry1}</h2>
+          <h1 className="inline-block">{this.state.player1}</h1>
+        </div>
+        <div className="block">
+          <h3>Player 2: </h3>
+          <h2>{this.state.randomCountry2}</h2>
+          <h1>{this.state.player2}</h1>
+        </div>
+        <div>
+          <button onClick={this.shuffleGame} className="btn btn-info shuffle">Shuffle</button>
+        </div>
       </div>
     );
   }
