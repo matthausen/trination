@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import $ from 'jquery';
-import logo from './logo.svg';
 import './App.css';
 import clubs from './components/clubs.json';
 import Title from './components/Title';
